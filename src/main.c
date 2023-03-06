@@ -13,7 +13,6 @@ int main() {
     for (int i = 0; i < table.entity_count; i++) {
       Health* health = table.health[i];
       if (health) health_system(health, &table);
-      else printf("No health component\n");
     }
   }
 }

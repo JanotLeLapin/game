@@ -30,4 +30,7 @@ void remove_entity(ComponentTable* table, int entity) {
   free(table->name[entity]);
   free(table->health[entity]);
   free(table->position[entity]);
+  table->name[entity] = NULL;
+  table->health[entity] = NULL;
+  table->position[entity] = NULL;
 }
