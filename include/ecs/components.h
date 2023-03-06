@@ -1,5 +1,10 @@
 #pragma once
 
+typedef struct Name {
+  int entity;
+  char* name;
+} Name;
+
 typedef struct Position {
   int entity;
   int x;

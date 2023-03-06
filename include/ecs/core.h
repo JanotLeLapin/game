@@ -2,16 +2,15 @@
 
 #include "include/ecs/components.h"
 
-#define MAX_CMP 256
-
-typedef struct ComponentNode {
-  void* data;
-  struct ComponentNode* next;
-} ComponentNode;
+#define MAX_CMP 4096
 
 typedef struct ComponentTable {
-  ComponentNode position;
-  ComponentNode health;
+  int entity_count;
+  Name* name[MAX_CMP];
+  Position* position[MAX_CMP];
+  Health* health[MAX_CMP];
+
 } ComponentTable;
 
-void iter_component(ComponentTable* table, ComponentNode* head, void (*f)(void* node, ComponentTable* table));
+void add_player(ComponentTable* table, char* name, int x, int y);
+void remove_entity(ComponentTable*, int entity);
