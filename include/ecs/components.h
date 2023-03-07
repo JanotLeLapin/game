@@ -16,3 +16,8 @@ typedef struct Health {
   int current;
   int max;
 } Health;
+
+typedef struct Sprite {
+  int entity;
+  char display;
+} Sprite;

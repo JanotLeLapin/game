@@ -9,6 +9,7 @@ typedef struct ComponentTable {
   Name* name[MAX_CMP];
   Position* position[MAX_CMP];
   Health* health[MAX_CMP];
+  Sprite* sprite[MAX_CMP];
 
 } ComponentTable;
 

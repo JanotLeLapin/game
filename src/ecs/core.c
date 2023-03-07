@@ -20,9 +20,14 @@ void add_player(ComponentTable* table, char* name, int x, int y) {
   position->x = x;
   position->y = y;
 
+  Sprite* sprite = malloc(sizeof(Sprite));
+  sprite->entity = id;
+  sprite->display = 'P';
+
   table->name[id] = name_cmp;
   table->health[id] = health;
   table->position[id] = position;
+  table->sprite[id] = sprite;
 }
 
 void remove_entity(ComponentTable* table, int entity) {
@@ -30,7 +35,9 @@ void remove_entity(ComponentTable* table, int entity) {
   free(table->name[entity]);
   free(table->health[entity]);
   free(table->position[entity]);
+  free(table->sprite[entity]);
   table->name[entity] = NULL;
   table->health[entity] = NULL;
   table->position[entity] = NULL;
+  table->sprite[entity] = NULL;
 }
