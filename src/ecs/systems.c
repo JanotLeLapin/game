@@ -30,5 +30,5 @@ void sprite_system(Sprite* sprite, ComponentTable* table) {
     return;
   }
 
-  mvaddch(pos->x, pos->y, sprite->display);
+  mvaddch(pos->y, pos->x, sprite->display);
 }

@@ -45,8 +45,22 @@ int main() {
     }
 
     ch = getch();
-    if (ch == 'q') {
-      running = 0;
+    switch (ch) {
+      case 'q':
+        running = 0;
+        break;
+      case KEY_LEFT:
+        table.position[0]->x--;
+        break;
+      case KEY_RIGHT:
+        table.position[0]->x++;
+        break;
+      case KEY_DOWN:
+        table.position[0]->y++;
+        break;
+      case KEY_UP:
+        table.position[0]->y--;
+        break;
     }
 
     ticks++;
